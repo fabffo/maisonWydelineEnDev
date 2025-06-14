@@ -1,0 +1,47 @@
+#productDetails {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 40px;
+    align-items: start;
+    padding: 40px 20px;
+    font-family: 'Oswald', sans-serif;
+    /* idem : scroll si trop étroit */
+    overflow-x: auto;
+}
+
+.product-detail-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.product-detail-content {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+/* Bouton Panier dans la fiche produit */
+.product-detail-content button {
+    /* Positionnement et espacement */
+    margin-top: 20px;
+    align-self: start;      /* ou center si vous préférez centrer sous le texte */
+    
+    /* Apparence */
+    background-color: #d36f4c;
+    color: #121212;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Effet au survol */
+    transition: background-color 0.3s ease;
+}
+.product-detail-content button:hover {
+    background-color: #a14b35;
+}

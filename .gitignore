@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Environnements locaux
+node_modules/
+.env
+
+
+

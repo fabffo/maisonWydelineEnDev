@@ -1,0 +1,111 @@
+.discover-btn:hover {
+  background-color: rgba(255,255,255,1);
+  transform: translateY(-2px);
+}
+
+.products {
+  /* transforme le conteneur en flexbox verticale */
+  display: flex;
+  flex-direction: column;
+  /* centre les enfants sur l’axe vertical */
+  justify-content: center;
+  /* centre les enfants sur l’axe horizontal */
+  align-items: center;
+
+  /* facultatif : donnez une hauteur pour voir l’effet */
+  /* height: 200px; */
+}
+  
+/* supprimez éventuellement les marges par défaut */
+.products h2 {
+ margin: 10px 0;  /* 20px au-dessus et 20px en-dessous */
+}
+
+
+/* Grille de 2 produits par ligne */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Chaque vignette */
+.product-item {
+  position: relative;
+  overflow: hidden;
+}
+.product-item img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay semi-transparent + rectangle visible */
+.product-item {
+  position: relative;
+  display: inline-block;      /* pour que l’overlay suive précisément la largeur de l’image */
+}
+
+.product-item img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.product-item .overlay {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F9F4EE; !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: #121212;;
+}
+
+.product-item:hover .overlay {
+  opacity: 1;
+}
+
+
+.product-item:hover .overlay {
+  opacity: 1;
+}
+
+
+/* Titres et textes dans l’overlay */
+.product-item .overlay h3,
+.product-item .overlay p {
+  margin: 5px 0;
+  color: #121212;;
+}
+
+/* Bouton dans l’overlay */
+.product-item .overlay .btn {
+  color: #121212;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+

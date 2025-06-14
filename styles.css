@@ -1,0 +1,106 @@
+/* Styles de base */
+html {
+  /* Ajustez cette valeur à la hauteur de votre header */
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth; /* pour un scroll fluide */
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #F9F4EE;
+    color: #121212;
+	padding-top: 80px;
+}
+
+/* Header et navigation */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F9F4EE;
+	max-width: 1200px;  /* ou la largeur que vous préférez */
+  margin: 0 auto;     /* centre le header dans la page */
+  width: 100%;        /* garde son comportement responsive */
+  position: fixed;  /* ou sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;     /* indiquez ici la hauteur réelle de votre header */
+  z-index: 1000;
+}
+.logo h1 {
+    margin-left: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #121212;
+}
+.logo a {
+    text-decoration: none;
+}
+nav {
+   margin-left: auto;   /* pousse le menu à fond à droite */
+  margin-right: 20px;  /* petit espace côté droit */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #121212;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Intro */
+.intro {
+    background-color: #F9F4EE;
+    background-image: url('images/fondEcran2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+.intro-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+.discover-btn {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.8);
+    color: #121212;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 2;
+}
+.discover-btn:hover {
+    background-color: rgba(255,255,255,1);
+    transform: translateY(-2px);
+}
