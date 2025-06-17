@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos – Maison Wydeline</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles_index.css">
+  
+  <script src="js/cart.js"></script>
+
+  <style>
+    .apropos-container {
+      display: flex;
+      margin: 20px;
+    }
+    .menu-secondaire {
+      width: 220px;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .menu-secondaire ul {
+      list-style: none;
+      padding: 0;
+    }
+    .menu-secondaire li {
+      margin-bottom: 10px;
+    }
+    .menu-secondaire a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .apropos-content {
+      flex: 1;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <h1>Maison Wydeline</h1>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#products">Notre collection</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="nouscontacter.html">Nous contacter</a></li>
+        <li><a href="panier.html" id="viewCart">Panier (<span id="cartCount">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="apropos-container">
+    <main class="apropos-content">
+      <section id="qui">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Maison Wydeline est une maison de création, de transmission et d'inspiration. Nous réunissons des profils passionnés par la beauté du geste, la transmission du savoir-faire et la transformation humaine. Nos collections sont pensées pour mettre en valeur l’élégance, le confort et la singularité.</p>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ</h2>
+        <p><strong>Où êtes-vous situés ?</strong><br>
+        Nous sommes présents à Paris et à Biarritz.</p>
+
+        <p><strong>Proposez-vous des tailles spécifiques ?</strong><br>
+        Oui, notre collection s’adresse notamment aux grandes pointures féminines, du 42 au 46.</p>
+
+        <p><strong>Livrez-vous à l'international ?</strong><br>
+        Oui, avec une attention particulière à l’emballage et aux délais.</p>
+      </section>
+
+      <section id="guide">
+        <h2>Le guide d'entretien</h2>
+        <p>Pour préserver vos chaussures Maison Wydeline :</p>
+        <ul>
+          <li>Nettoyez-les avec des produits naturels et non agressifs</li>
+          <li>Évitez l’exposition prolongée au soleil ou à l’humidité</li>
+          <li>Rangez-les dans un endroit tempéré et aéré</li>
+          <li>Utilisez des embauchoirs pour conserver leur forme</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <h3>&copy; 2025 Maison Wydeline. Tous droits réservés.</h3>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

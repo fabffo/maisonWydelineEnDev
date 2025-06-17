@@ -1,12 +1,35 @@
-# MacOS
+# Fichiers système (Windows / macOS)
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Logs
+# Logs et temporaires
 *.log
+*.tmp
+*.bak
+*.swp
+
+# Fichiers liés aux éditeurs
+.vscode/
+.idea/
+*.code-workspace
+
+# Node.js (si jamais utilisé)
+node_modules/
+npm-debug.log*
+
+# Dossiers de build (optionnel si compilation)
+dist/
+build/
 
 # Environnements locaux
-node_modules/
 .env
+.env.*
 
+# Images générées automatiquement (si applicable)
+*.webp
+*.cache
 
-
+# Git
+.git/

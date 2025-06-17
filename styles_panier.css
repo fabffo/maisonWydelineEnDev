@@ -1,0 +1,52 @@
+
+
+/* TABLEAU */
+#cartTable {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+#cartTable thead {
+  background-color: #333;
+  color: #fff;
+}
+#cartTable th,
+#cartTable td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+#cartTable tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* TOTAL */
+.total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  color: #333;
+}
+
+/* BOUTON VIDER */
+#clearCartBtn {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #aa0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#clearCartBtn:hover {
+  background-color: #cc0000;
+}

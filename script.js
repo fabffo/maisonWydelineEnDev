@@ -1,49 +1,28 @@
-// Variables pour gérer le panier
-let cart = [];
-const cartCount = document.getElementById('cartCount');
-const cartItems = document.getElementById('cartItems');
-const totalPrice = document.getElementById('totalPrice');
-const cartModal = document.getElementById('cartModal');
-const closeCart = document.getElementById('closeCart');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Fonction pour mettre à jour le panier affiché
-function updateCart() {
-    cartItems.innerHTML = ''; // Vider les éléments du panier
-    let total = 0;
-    
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - €${item.price}`;
-        cartItems.appendChild(li);
-        total += item.price;
-    });
-
-    totalPrice.textContent = `€${total}`;
-    cartCount.textContent = cart.length;
+function updateCartCount() {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById('cartCount').textContent = count;
 }
 
-// Fonction pour ajouter un produit au panier
 function addToCart(name, price) {
-    cart.push({ name, price });
-    updateCart();
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name, price: parseFloat(price), quantity: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
 }
 
-// Fonction pour ouvrir le modal du panier
-document.getElementById('viewCart').addEventListener('click', () => {
-    cartModal.style.display = 'flex';
+document.querySelectorAll('.addToCart').forEach(button => {
+  button.addEventListener('click', () => {
+    const name = button.dataset.name;
+    const price = button.dataset.price;
+    addToCart(name, price);
+  });
 });
 
-// Fonction pour fermer le modal
-closeCart.addEventListener('click', () => {
-    cartModal.style.display = 'none';
-});
-
-// Ajouter les produits au panier
-const addButtons = document.querySelectorAll('.addToCart');
-addButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const name = button.getAttribute('data-name');
-        const price = parseFloat(button.getAttribute('data-price'));
-        addToCart(name, price);
-    });
-});
+updateCartCount();

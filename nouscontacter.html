@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Maison Wydeline</title>
+
+  <!-- Polices Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles_index.css">
+
+<script src="js/cart.js"></script>
+
+  <style>
+    .contact-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+    .contact-container h2 {
+      margin-top: 0;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+    form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    form button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <h1>Maison Wydeline</h1>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#products">Notre collection</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="nouscontacter.html">Nous contacter</a></li>
+        <li><a href="panier.html" id="viewCart">Panier (<span id="cartCount">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contact-container">
+    <h2>Nous contacter</h2>
+    <p>Une question, une commande spéciale, ou simplement un mot doux ? Écrivez-nous :</p>
+
+    <form action="mailto:contact@maisonwydeline.fr" method="post" enctype="text/plain">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <footer>
+    <h3>&copy; 2025 Maison Wydeline. Tous droits réservés.</h3>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+ 
