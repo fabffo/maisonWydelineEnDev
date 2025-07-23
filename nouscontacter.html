@@ -1,61 +1,185 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – Maison Wydeline</title>
 
   <!-- Polices Google -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Feuilles de style -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles_index.css">
-
-<script src="js/cart.js"></script>
-
+  <!-- Styles -->
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Oswald', sans-serif;
+      background-color: #F9F4EE;
+      color: #121212;
+      margin: 0;
+      padding-top: 100px; /* Réajusté via JS plus bas */
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #F9F4EE;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 10px 20px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: #121212;
+    }
+
+    nav {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #121212;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
     .contact-container {
       max-width: 800px;
       margin: 40px auto;
       padding: 20px;
-      background: #f9f9f9;
+      background: #fff;
       border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     .contact-container h2 {
       margin-top: 0;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     form label {
-      display: block;
-      margin: 15px 0 5px;
       font-weight: bold;
     }
-    form input, form textarea {
+
+    form input,
+    form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-family: inherit;
+      font-size: 1rem;
     }
+
     form textarea {
       resize: vertical;
       height: 120px;
     }
+
     form button {
-      margin-top: 15px;
+      width: fit-content;
       padding: 10px 20px;
       background: black;
       color: white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 1em;
+      font-size: 1rem;
     }
+
     form button:hover {
       background: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive mobile */
+    @media screen and (max-width: 600px) {
+      body {
+        padding-top: 180px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+      }
+
+      nav ul li {
+        display: block;
+        text-align: center;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.05);
+        border-radius: 6px;
+      }
+
+      .contact-container {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      form button {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -100,7 +224,17 @@
     <h3>&copy; 2025 Maison Wydeline. Tous droits réservés.</h3>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JS pour ajuster le padding-top dynamiquement -->
+  <script>
+    function adjustBodyPadding() {
+      const header = document.querySelector("header");
+      if (header) {
+        document.body.style.paddingTop = header.offsetHeight + "px";
+      }
+    }
+    window.addEventListener("load", adjustBodyPadding);
+    window.addEventListener("resize", adjustBodyPadding);
+  </script>
+
 </body>
 </html>
- 
